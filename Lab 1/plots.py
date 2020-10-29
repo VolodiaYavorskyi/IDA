@@ -20,7 +20,7 @@ def numericPlot(dataframe, column, pl_type):
         return
     elif pl_type == "pie":
         stats = dataframe.value_counts(column)
-        plt.pie(stats, autopct='%1.1f%%')
+        ax.pie(stats, autopct='%1.1f%%')
         ax.legend(stats.index, fontsize="x-small", loc='best', bbox_to_anchor=(0.8, 0.65, 0.5, 0.5))
         ax.set_title("Pie chart")
         plt.show()
